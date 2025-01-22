@@ -6,6 +6,7 @@ import com.student.RepositoryRuntimeException;
 import com.student.store.DepartmentRepository;
 import com.student.store.StudentRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.student.entity.*;
@@ -53,7 +54,7 @@ public class CollegeService {
      */
     public boolean deptAdd(Department dept) throws RepositoryException {
         try{
-            if (deptRepo.IsDeptIdNotPresent(dept.id)){
+            if (deptRepo.IsDeptIdNotPresent(dept.getId())){
                 log.info("Saving the new department to department list.");
                 return deptRepo.DeptSave(dept);
             } else {
@@ -163,9 +164,9 @@ public class CollegeService {
     /**
      * This method helps to update the department name by facilitating communication between app and repository.
      */
-    public void updateDeptName(int dept_id,String newName) throws RepositoryException {
+    public Document updateDeptName(int dept_id, String newName) throws RepositoryException {
         try{
-            deptRepo.updateDeptName(dept_id,newName);
+            return deptRepo.updateDeptName(dept_id,newName);
         }catch (MongoException e)
         {
             throw new RepositoryException(e.getMessage(),e);
@@ -176,10 +177,10 @@ public class CollegeService {
     /**
      * This method helps to update the HOD name by facilitating communication between app and repository.
      */
-    public void updateHODName(int dept_id,String newName)
+    public Document updateHODName(int dept_id,String newName)
     {
         try{
-            deptRepo.updateHODName(dept_id,newName);
+            return deptRepo.updateHODName(dept_id,newName);
         }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }

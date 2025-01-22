@@ -90,3 +90,738 @@
 2025-01-22 11:16:47 INFO  c.student.store.DepartmentRepository - Checking dept id is present or not
 2025-01-22 11:16:47 INFO  com.student.service.CollegeService - Saving the new department to department list.
 2025-01-22 11:16:47 INFO  c.student.store.DepartmentRepository - Adding new department
+2025-01-22 13:05:40 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:05:40 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 6908 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:05:40 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:05:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:05:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:05:43 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:05:43 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:05:43 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:05:43 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:05:44 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:05:44 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3614 ms
+2025-01-22 13:05:44 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:05:44 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:05:44 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:05:44 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:06:32 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:06:32 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 7160 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:06:32 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:06:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:06:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:06:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:06:36 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:06:36 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:06:36 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:06:36 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:06:36 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3596 ms
+2025-01-22 13:06:36 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:06:36 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:06:36 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:06:36 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:07:15 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:07:15 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 2668 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:07:15 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:07:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:07:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:07:18 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:07:18 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:07:18 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:07:18 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:07:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:07:19 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3682 ms
+2025-01-22 13:07:19 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:07:19 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:07:19 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:07:19 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:07:43 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:07:43 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 8116 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:07:43 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:07:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:07:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:07:46 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:07:46 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:07:46 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:07:46 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:07:46 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:07:46 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3522 ms
+2025-01-22 13:07:47 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:07:47 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:07:47 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:07:47 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:08:12 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:08:12 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 6736 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:08:12 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:08:14 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:08:14 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:08:15 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:08:15 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:08:15 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:08:15 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:08:16 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:08:16 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3661 ms
+2025-01-22 13:08:16 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:08:16 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:08:16 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:08:16 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:09:35 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:09:35 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 8804 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:09:35 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:09:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:09:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:09:39 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:09:39 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:09:39 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:09:39 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:09:39 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:09:39 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3920 ms
+2025-01-22 13:09:39 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:09:39 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:09:39 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:09:39 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:11:35 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:11:35 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 1496 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:11:35 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:11:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:11:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:11:40 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:11:40 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:11:40 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:11:40 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:11:40 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:11:40 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4955 ms
+2025-01-22 13:11:41 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:11:41 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:11:41 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:12:10 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:12:10 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 8732 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:12:10 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:12:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:12:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:12:29 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:12:29 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:12:29 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:12:29 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:12:31 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:12:31 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 19778 ms
+2025-01-22 13:14:15 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:14:15 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:14:15 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:14:15 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:17:14 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:17:15 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 4700 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:17:15 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:17:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:17:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:17:32 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:17:32 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:17:32 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:17:32 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:17:34 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:17:34 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 18422 ms
+2025-01-22 13:17:35 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:17:35 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:17:35 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:17:35 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:18:19 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 7232 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:18:19 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:18:20 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:18:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22 13:18:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2025-01-22 13:18:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:18:24 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:18:24 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:18:24 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:18:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:18:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4436 ms
+2025-01-22 13:18:24 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-01-22 13:18:24 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-01-22 13:18:24 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-22 13:18:24 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-22 13:27:11 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:27:11 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 8288 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:27:11 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:27:14 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:27:14 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:27:14 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:27:14 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:27:14 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:27:14 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3099 ms
+2025-01-22 13:27:15 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 13:27:15 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@1fc713c9]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 13:27:15 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 13:27:15 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:1}] to localhost:27017
+2025-01-22 13:27:15 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=156141100}
+2025-01-22 13:27:15 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+2025-01-22 13:27:16 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:27:16 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 13:27:16 INFO  com.student.Application - Started Application in 5.966 seconds (JVM running for 7.573)
+2025-01-22 13:27:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 13:27:22 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 13:27:22 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-01-22 13:27:22 INFO  com.student.service.CollegeService - Fetching department data from the repository.
+2025-01-22 13:27:22 INFO  c.student.store.DepartmentRepository - Fetching all department records...
+2025-01-22 13:27:22 INFO  c.student.store.DepartmentRepository - hello
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The array is created
+2025-01-22 13:27:22 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27017
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - Resizing is about to happening
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - Resizing is happening
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:27:22 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:28:12 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department) with 2 errors: [Field error in object 'department' on field 'name': rejected value [3456]; codes [Pattern.department.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@4961aa6d,^[a-zA-Z ]+$]; default message [Name must contain only alphabets and spaces]] [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:29:13 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:29:19 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:30:03 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:30:13 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:30:21 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:31:20 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:31:20 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 11072 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:31:20 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:31:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:31:23 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:31:23 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:31:23 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:31:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:31:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3698 ms
+2025-01-22 13:31:24 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 13:31:24 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@78d9f51b]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 13:31:24 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 13:31:25 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:5}] to localhost:27017
+2025-01-22 13:31:25 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
+2025-01-22 13:31:25 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=83926800}
+2025-01-22 13:31:26 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:31:26 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 13:31:26 INFO  com.student.Application - Started Application in 7.001 seconds (JVM running for 9.134)
+2025-01-22 13:31:33 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 13:31:33 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 13:31:33 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-01-22 13:31:33 INFO  com.student.service.CollegeService - Fetching department data from the repository.
+2025-01-22 13:31:33 INFO  c.student.store.DepartmentRepository - Fetching all department records...
+2025-01-22 13:31:33 INFO  c.student.store.DepartmentRepository - hello
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The array is created
+2025-01-22 13:31:33 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:6}] to localhost:27017
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - Resizing is about to happening
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - Resizing is happening
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:33 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 13:31:50 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:32:02 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 13:32:02 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 2400 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 13:32:02 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 13:32:06 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 13:32:06 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:32:06 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 13:32:06 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 13:32:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 13:32:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4498 ms
+2025-01-22 13:32:08 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 13:32:08 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@62c72501]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 13:32:08 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 13:32:08 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
+2025-01-22 13:32:08 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=86052000}
+2025-01-22 13:32:08 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:7}] to localhost:27017
+2025-01-22 13:32:11 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 13:32:11 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 13:32:11 INFO  com.student.Application - Started Application in 10.202 seconds (JVM running for 12.168)
+2025-01-22 13:32:16 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 13:32:16 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 13:32:16 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-01-22 13:32:17 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:33:05 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:33:29 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 13:35:10 INFO  com.student.service.CollegeService - deleting the students belongs to specific dept
+2025-01-22 13:35:22 INFO  com.student.store.StudentRepository - Deleting the students with matching dept
+2025-01-22 13:35:23 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:19}] to localhost:27017
+2025-01-22 13:35:33 INFO  com.student.service.CollegeService - deleting the department from  collection
+2025-01-22 13:35:33 INFO  c.student.store.DepartmentRepository - Deleting the  department from collection
+2025-01-22 14:37:24 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 14:37:24 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 628 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 14:37:24 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 14:37:28 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 14:37:28 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 14:37:28 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 14:37:28 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 14:37:29 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 14:37:29 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4533 ms
+2025-01-22 14:37:29 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 14:37:29 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@d2291de]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 14:37:29 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 14:37:29 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:20}] to localhost:27017
+2025-01-22 14:37:29 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:21}] to localhost:27017
+2025-01-22 14:37:29 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=47887199}
+2025-01-22 14:37:30 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 14:37:30 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 14:37:30 INFO  com.student.Application - Started Application in 7.56 seconds (JVM running for 9.987)
+2025-01-22 14:40:36 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 14:40:36 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 1304 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 14:40:36 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 14:40:40 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 14:40:40 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 14:40:40 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 14:40:40 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 14:40:40 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 14:40:40 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4036 ms
+2025-01-22 14:40:40 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 14:40:40 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@8cc8cdb]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 14:40:40 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 14:40:40 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:22}] to localhost:27017
+2025-01-22 14:40:40 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:23}] to localhost:27017
+2025-01-22 14:40:40 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=52886100}
+2025-01-22 14:40:43 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 14:40:43 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 14:40:43 INFO  com.student.Application - Started Application in 7.818 seconds (JVM running for 9.602)
+2025-01-22 14:40:59 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 14:40:59 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 14:40:59 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-01-22 14:40:59 INFO  com.student.service.CollegeService - Fetching department data from the repository.
+2025-01-22 14:40:59 INFO  c.student.store.DepartmentRepository - Fetching all department records...
+2025-01-22 14:40:59 INFO  c.student.store.DepartmentRepository - hello
+2025-01-22 14:40:59 INFO  com.mojro.collection.ArrayList - The array is created
+2025-01-22 14:40:59 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:24}] to localhost:27017
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - Resizing is about to happening
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - Resizing is happening
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:00 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 14:41:18 INFO  com.student.service.CollegeService - deleting the students belongs to specific dept
+2025-01-22 14:41:18 INFO  com.student.store.StudentRepository - Deleting the students with matching dept
+2025-01-22 14:41:18 INFO  com.student.service.CollegeService - deleting the department from  collection
+2025-01-22 14:41:18 INFO  c.student.store.DepartmentRepository - Deleting the  department from collection
+2025-01-22 14:41:40 INFO  com.student.service.CollegeService - deleting the students belongs to specific dept
+2025-01-22 14:41:40 INFO  com.student.store.StudentRepository - Deleting the students with matching dept
+2025-01-22 14:41:40 INFO  com.student.service.CollegeService - deleting the department from  collection
+2025-01-22 14:41:40 INFO  c.student.store.DepartmentRepository - Deleting the  department from collection
+2025-01-22 14:44:12 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2025-01-22 14:44:56 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 14:44:56 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 11856 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 14:44:57 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 14:45:00 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 14:45:00 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 14:45:00 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 14:45:00 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 14:45:00 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 14:45:00 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3667 ms
+2025-01-22 14:45:02 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 14:45:02 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@62c72501]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 14:45:03 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 14:45:03 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:26}] to localhost:27017
+2025-01-22 14:45:03 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:25}] to localhost:27017
+2025-01-22 14:45:03 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=100540800}
+2025-01-22 14:45:05 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 14:45:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 14:45:05 INFO  com.student.Application - Started Application in 9.796 seconds (JVM running for 12.981)
+2025-01-22 14:45:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 14:45:25 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 14:45:25 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-01-22 14:45:27 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 14:45:50 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 14:45:50 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 12676 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 14:45:50 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 14:45:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 14:45:54 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 14:45:54 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 14:45:54 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 14:45:55 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 14:45:55 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3873 ms
+2025-01-22 14:45:55 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 14:45:55 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4091b9c3]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 14:45:55 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 14:45:55 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:27}] to localhost:27017
+2025-01-22 14:45:55 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:28}] to localhost:27017
+2025-01-22 14:45:55 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=87896200}
+2025-01-22 14:45:56 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 14:45:56 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 14:45:56 INFO  com.student.Application - Started Application in 6.832 seconds (JVM running for 8.875)
+2025-01-22 14:45:59 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 14:45:59 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 14:45:59 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-01-22 14:45:59 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 14:55:37 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 14:55:41 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 14:56:01 INFO  c.student.store.DepartmentRepository - Checking dept id is present or not
+2025-01-22 14:56:01 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:29}] to localhost:27017
+2025-01-22 14:56:01 INFO  com.student.service.CollegeService - Saving the new department to department list.
+2025-01-22 14:56:01 INFO  c.student.store.DepartmentRepository - Adding new department
+2025-01-22 14:56:44 INFO  c.student.store.DepartmentRepository - Checking dept id is present or not
+2025-01-22 14:56:44 INFO  com.student.service.CollegeService - Saving the new department to department list.
+2025-01-22 14:56:44 INFO  c.student.store.DepartmentRepository - Adding new department
+2025-01-22 14:57:04 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [null]; codes [NotBlank.department.HODName,NotBlank.HODName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName]]; default message [HOD Name cannot be blank]] ]
+2025-01-22 14:57:23 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'name': rejected value [computer2science]; codes [Pattern.department.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@732ffd69,^[a-zA-Z ]+$]; default message [Name must contain only alphabets and spaces]] ]
+2025-01-22 14:57:31 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'name': rejected value [computer2science]; codes [Pattern.department.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@732ffd69,^[a-zA-Z ]+$]; default message [Name must contain only alphabets and spaces]] ]
+2025-01-22 14:57:38 INFO  c.student.store.DepartmentRepository - Checking dept id is present or not
+2025-01-22 14:57:38 INFO  com.student.service.CollegeService - Saving the new department to department list.
+2025-01-22 14:57:38 INFO  c.student.store.DepartmentRepository - Adding new department
+2025-01-22 14:57:48 INFO  c.student.store.DepartmentRepository - Checking dept id is present or not
+2025-01-22 14:57:48 INFO  com.student.service.CollegeService - Saving the new department to department list.
+2025-01-22 14:57:48 INFO  c.student.store.DepartmentRepository - Adding new department
+2025-01-22 14:58:01 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> com.student.app.CollegeApi.createDept(com.student.entity.Department): [Field error in object 'department' on field 'HODName': rejected value [amo3gh]; codes [Pattern.department.HODName,Pattern.HODName,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [department.HODName,HODName]; arguments []; default message [HODName],[Ljavax.validation.constraints.Pattern$Flag;@732ffd69,^[a-zA-Z ]+$]; default message [HOD Name must contain only alphabets and spaces]] ]
+2025-01-22 15:01:36 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 15:01:36 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 3112 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 15:01:36 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 15:01:39 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 15:01:39 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:01:39 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 15:01:39 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 15:01:39 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 15:01:39 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3711 ms
+2025-01-22 15:01:40 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 15:01:40 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@78a515e4]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 15:01:40 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 15:01:40 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:30}] to localhost:27017
+2025-01-22 15:01:40 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:31}] to localhost:27017
+2025-01-22 15:01:40 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=57930200}
+2025-01-22 15:01:41 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:01:41 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 15:01:41 INFO  com.student.Application - Started Application in 6.341 seconds (JVM running for 8.392)
+2025-01-22 15:02:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 15:02:19 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 15:02:19 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-01-22 15:02:19 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2025-01-22 15:03:04 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:32}] to localhost:27017
+2025-01-22 15:05:54 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 15:05:54 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 12736 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 15:05:54 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 15:05:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 15:05:58 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:05:58 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 15:05:58 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 15:05:58 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 15:05:58 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3907 ms
+2025-01-22 15:05:58 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 15:05:58 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@3d1f558a]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 15:05:58 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 15:05:58 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:33}] to localhost:27017
+2025-01-22 15:05:58 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:34}] to localhost:27017
+2025-01-22 15:05:58 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=75055400}
+2025-01-22 15:06:00 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:06:00 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 15:06:00 INFO  com.student.Application - Started Application in 6.771 seconds (JVM running for 8.74)
+2025-01-22 15:06:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 15:06:10 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 15:06:10 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-01-22 15:06:10 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:35}] to localhost:27017
+2025-01-22 15:13:12 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 15:13:12 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 13172 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 15:13:12 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 15:13:15 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 15:13:15 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:13:15 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 15:13:15 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 15:13:16 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 15:13:16 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3255 ms
+2025-01-22 15:13:16 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 15:13:16 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@11f9535b]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 15:13:16 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 15:13:16 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:36}] to localhost:27017
+2025-01-22 15:13:16 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:37}] to localhost:27017
+2025-01-22 15:13:16 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=72338000}
+2025-01-22 15:13:17 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:13:17 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 15:13:17 INFO  com.student.Application - Started Application in 5.81 seconds (JVM running for 7.725)
+2025-01-22 15:15:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 15:15:06 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 15:15:06 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-01-22 15:15:06 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:38}] to localhost:27017
+2025-01-22 15:16:59 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 15:16:59 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 11948 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 15:16:59 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 15:17:03 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 15:17:03 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:17:03 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 15:17:03 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 15:17:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 15:17:03 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3429 ms
+2025-01-22 15:17:03 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 15:17:04 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@8cc8cdb]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 15:17:04 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 15:17:04 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:40}] to localhost:27017
+2025-01-22 15:17:04 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:39}] to localhost:27017
+2025-01-22 15:17:04 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=70229900}
+2025-01-22 15:17:05 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:17:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 15:17:05 INFO  com.student.Application - Started Application in 6.083 seconds (JVM running for 7.722)
+2025-01-22 15:17:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 15:17:23 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 15:17:23 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-01-22 15:17:23 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:41}] to localhost:27017
+2025-01-22 15:26:14 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-01-22 15:26:14 INFO  com.student.Application - Starting Application using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 8748 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-22 15:26:14 INFO  com.student.Application - No active profile set, falling back to 1 default profile: "default"
+2025-01-22 15:26:18 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-22 15:26:18 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:26:18 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-22 15:26:18 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-01-22 15:26:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-22 15:26:19 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4525 ms
+2025-01-22 15:26:19 INFO  com.student.config.AppConfig - Initializing Mongo Clients
+2025-01-22 15:26:19 INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@73ae0257]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2025-01-22 15:26:19 INFO  com.student.config.AppConfig - Initializing Mongo DB
+2025-01-22 15:26:19 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:51}] to localhost:27017
+2025-01-22 15:26:19 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:52}] to localhost:27017
+2025-01-22 15:26:19 INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=47351400}
+2025-01-22 15:26:20 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-01-22 15:26:20 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-01-22 15:26:20 INFO  com.student.Application - Started Application in 7.106 seconds (JVM running for 9.405)
+2025-01-22 15:26:37 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-22 15:26:37 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-22 15:26:37 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-01-22 15:26:37 INFO  com.student.service.CollegeService - Fetching student data from the repository.
+2025-01-22 15:26:37 INFO  com.student.store.StudentRepository - Fetching all student records...
+2025-01-22 15:26:37 INFO  com.mojro.collection.ArrayList - The array is created
+2025-01-22 15:26:37 INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:53}] to localhost:27017
+2025-01-22 15:26:37 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:26:37 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 15:26:37 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:26:37 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 15:26:37 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:26:37 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 15:26:37 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:26:37 INFO  com.mojro.collection.ArrayList - The element is added to the ArrayList
+2025-01-22 15:27:15 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:27:15 INFO  com.student.app.CollegeApi - Collecting the data of the student from the user
+2025-01-22 15:27:15 INFO  c.student.store.DepartmentRepository - Checking dept id is present or not
+2025-01-22 15:27:15 INFO  com.student.store.StudentRepository - Checking id is unique or not
+2025-01-22 15:27:15 INFO  com.student.service.CollegeService - Saving the new student to student list.
+2025-01-22 15:27:15 INFO  com.student.store.StudentRepository - Adding new student
+2025-01-22 15:28:53 INFO  com.student.service.CollegeService - deleting the element from both collection
+2025-01-22 15:28:53 INFO  com.student.store.StudentRepository - Deleting the student record
+2025-01-22 15:29:25 INFO  com.student.service.CollegeService - deleting the element from both collection
+2025-01-22 15:29:25 INFO  com.student.store.StudentRepository - Deleting the student record
+2025-01-22 15:30:21 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2025-01-22 15:30:49 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:30:49 INFO  com.student.store.StudentRepository - Checking id is unique or not
+2025-01-22 15:30:55 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:30:55 INFO  com.student.store.StudentRepository - Checking id is unique or not
+2025-01-22 15:32:07 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:32:07 INFO  com.student.store.StudentRepository - Checking id is unique or not
+2025-01-22 15:32:11 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:32:11 INFO  com.student.store.StudentRepository - Checking id is unique or not
+2025-01-22 15:33:03 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:33:03 INFO  com.student.store.StudentRepository - Checking id is unique or not
+2025-01-22 15:34:46 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:34:46 INFO  com.student.store.StudentRepository - Checking id is unique or not
+2025-01-22 15:34:54 INFO  com.student.entity.Student - It is a non parameterized constructor
+2025-01-22 15:34:54 INFO  com.student.store.StudentRepository - Checking id is unique or not

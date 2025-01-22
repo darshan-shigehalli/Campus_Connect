@@ -28,14 +28,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <version>3.3.7</version>
+            <version>2.7.10</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.3.7</version>
+            <version>2.7.10</version>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -43,16 +43,43 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--        <dependency>-->
+<!--            <groupId>javax.validation</groupId>-->
+<!--            <artifactId>validation-api</artifactId>-->
+<!--            <version>2.0.1.Final</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.hibernate.validator</groupId>-->
+<!--            <artifactId>hibernate-validator</artifactId>-->
+<!--            <version>6.0.13.Final</version>-->
+<!--        </dependency>-->
+        <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.el</artifactId>
             <version>3.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator-annotation-processor</artifactId>
+            <version>6.0.11.Final</version>
+        </dependency>
+
+        <!-- Unified Expression Language - Spec -->
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>3.0.1-b06</version>
+        </dependency>
 
         <dependency>
-            <groupId>org.hibernate.validator</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>8.0.2.Final</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
+
         <!-- MongoDB Driver -->
         <dependency>
             <groupId>org.mongodb</groupId>
