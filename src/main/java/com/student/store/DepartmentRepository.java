@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.mongodb.MongoException;
 import com.mongodb.client.*;
 import com.student.service.CollegeService;
+import lombok.extern.slf4j.Slf4j;
 import lombok.extern.slf4j.XSlf4j;
 import org.bson.Document;
 import com.mojro.collection.ArrayList;
@@ -23,16 +24,13 @@ import javax.annotation.PostConstruct;
  * This class is for performing CRUD operations on  department collection.
  */
 @Component
-@XSlf4j
+@Slf4j
 public class DepartmentRepository{
     @Autowired
     private MongoClient mongoClient;
     @Autowired
     private MongoDatabase database;
     private MongoCollection<Document> collection;
-
-    private static final Logger log = LoggerFactory.getLogger(DepartmentRepository.class);
-
     /**
      * This is the method to choose the correct collection to perform the action before the bean of this class is being used.
      */
@@ -126,12 +124,14 @@ public class DepartmentRepository{
     /**
      * This method is used to update the name of the existing department
      */
-    public void updateDeptName(int dept_id,String newName)  throws RepositoryRuntimeException
+    public Document updateDeptName(int dept_id,String newName)  throws RepositoryRuntimeException
     {
         try{
             Document filter = new Document("id", dept_id);
             Document update = new Document("$set", new Document("name", newName));
             var result = collection.updateOne(filter, update);
+            Document query = new Document("id", dept_id);
+            return collection.find(query).first();
         }catch(RepositoryRuntimeException e)
         {
             throw new RepositoryRuntimeException(e.getMessage(),e);
@@ -142,12 +142,14 @@ public class DepartmentRepository{
     /**
      * This method is used to update the HOD name of the existing department
      */
-    public void updateHODName(int dept_id,String newName) throws RepositoryRuntimeException
+    public Document updateHODName(int dept_id,String newName) throws RepositoryRuntimeException
     {
         try{
             Document filter = new Document("id", dept_id);
-            Document update = new Document("$set", new Document("hodname", newName));
+            Document update = new Document("$set", new Document("HODName", newName));
             var result = collection.updateOne(filter, update);
+            Document query = new Document("id", dept_id);
+            return collection.find(query).first();
         }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
