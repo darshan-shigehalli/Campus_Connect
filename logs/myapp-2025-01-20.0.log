@@ -1,0 +1,52 @@
+2025-01-20 12:20:31 INFO  com.student.app.SpringApp - Starting SpringApp using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 10324 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-20 12:20:31 INFO  com.student.app.SpringApp - No active profile set, falling back to 1 default profile: "default"
+2025-01-20 12:20:34 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-20 12:20:34 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2893 ms
+2025-01-20 12:20:34 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'collegeApp': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.student.service.CollegeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-20 12:20:34 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-20 12:20:35 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field service in com.student.app.CollegeApp required a bean of type 'com.student.service.CollegeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.student.service.CollegeService' in your configuration.
+
+2025-01-20 14:58:29 INFO  com.student.app.SpringApp - Starting SpringApp using Java 21.0.2 on DESKTOP-UDHC4E0 with PID 10092 (A:\collegedatabasewithHttpendpoints\target\classes started by Lenovo in A:\collegedatabasewithHttpendpoints)
+2025-01-20 14:58:29 INFO  com.student.app.SpringApp - No active profile set, falling back to 1 default profile: "default"
+2025-01-20 14:58:31 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-01-20 14:58:31 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2690 ms
+2025-01-20 14:58:32 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'collegeApp': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.student.service.CollegeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-20 14:58:32 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-20 14:58:32 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field service in com.student.app.CollegeApp required a bean of type 'com.student.service.CollegeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.student.service.CollegeService' in your configuration.
+
