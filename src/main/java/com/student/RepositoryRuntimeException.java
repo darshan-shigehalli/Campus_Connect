@@ -1,7 +1,7 @@
 package com.student;
 
 /**
- * This class is defined to capture all runtime exception might happen at repository level.
+ * This class is defined to capture all runtime exception which might happen at repository level.
  */
 public class RepositoryRuntimeException extends RuntimeException{
     public RepositoryRuntimeException() {

@@ -13,7 +13,6 @@ import com.mongodb.client.result.DeleteResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.student.RepositoryRuntimeException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
@@ -43,7 +42,7 @@ public class StudentRepository{
      * This method is used to read all the entries from the database.
      * @return list of student class objects
      */
-    public ArrayList<Student> viewStudents() throws RepositoryRuntimeException, RepositoryException {
+    public ArrayList<Student> view() throws RepositoryRuntimeException, RepositoryException {
         logger.info("Fetching all student records...");
         ArrayList<Student> studentList = new ArrayList<>();
         try {
@@ -60,8 +59,7 @@ public class StudentRepository{
             throw new MongoException(e.getMessage(),e);
         } catch (JsonProcessingException e) {
             throw new RepositoryException(e.getMessage(),e);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
         return studentList;
@@ -91,8 +89,7 @@ public class StudentRepository{
         catch (JsonProcessingException e) {
             logger.error("JSON processing error: {}", e.getMessage(), e);
             throw new RepositoryException(e.getMessage(),e);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
         return list;
@@ -112,8 +109,7 @@ public class StudentRepository{
             return true;
         } catch (JsonProcessingException e) {
             throw new RepositoryException(e.getMessage(),e);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
     }
@@ -128,8 +124,7 @@ public class StudentRepository{
             logger.info("Checking id is unique or not");
             Document query = new Document("id", id);
             return collection.find(query).first() == null;
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
     }
@@ -139,31 +134,26 @@ public class StudentRepository{
      * @param id this is id to delete the student
      * @return return true if document is deleted or false is not even one document is deleted.
      */
-    public boolean delete(int id)
-    {
+    public boolean delete(int id) {
         try{
             logger.info("Deleting the student record");
             Document query = new Document("id",id);
             DeleteResult result = collection.deleteOne(query);
             return result.getDeletedCount() != 0;
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
-
     }
 
     /**
      * this method is used for deleting all the students of a dept before deleting dept itself
      */
-    public  void deleteStudentOfDept(int dept_id)
-    {
+    public  void deleteStudentOfDept(int dept_id) {
         try{
             logger.info("Deleting the students with matching dept");
             Document query = new Document("dept_id",dept_id);
             DeleteResult result = collection.deleteMany(query);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
 
@@ -172,14 +162,12 @@ public class StudentRepository{
     /**
      * This method helps to update the student name.
      */
-    public void updateStdName(int std_id,String newName)
-    {
+    public void updateStdName(int std_id,String newName) {
         try{
             Document filter = new Document("id", std_id);
             Document update = new Document("$set", new Document("name", newName));
             var result = collection.updateOne(filter, update);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
     }
@@ -187,14 +175,12 @@ public class StudentRepository{
     /**
      * This method helps to update the student age.
      */
-    public void updateStdAge(int std_id,int newAge)
-    {
+    public void updateStdAge(int std_id,int newAge) {
         try{
             Document filter = new Document("id", std_id);
             Document update = new Document("$set", new Document("age", newAge));
             var result = collection.updateOne(filter, update);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
     }
@@ -202,16 +188,13 @@ public class StudentRepository{
     /**
      * This method helps to update the department id of student.
      */
-    public void updateStdDeptId(int std_id,int newId)
-    {
+    public void updateStdDeptId(int std_id,int newId) {
         try{
             Document filter = new Document("id", std_id);
             Document update = new Document("$set", new Document("dept_id", newId));
             var result = collection.updateOne(filter, update);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
-
     }
 }

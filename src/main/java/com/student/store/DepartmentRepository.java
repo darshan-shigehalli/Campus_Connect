@@ -3,9 +3,7 @@ package com.student.store;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.mongodb.MongoException;
 import com.mongodb.client.*;
-import com.student.service.CollegeService;
 import lombok.extern.slf4j.Slf4j;
-import lombok.extern.slf4j.XSlf4j;
 import org.bson.Document;
 import com.mojro.collection.ArrayList;
 import com.student.entity.*;
@@ -13,8 +11,6 @@ import com.mongodb.client.result.DeleteResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.student.RepositoryException;
 import com.student.RepositoryRuntimeException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -31,22 +27,18 @@ public class DepartmentRepository{
     @Autowired
     private MongoDatabase database;
     private MongoCollection<Document> collection;
-    /**
-     * This is the method to choose the correct collection to perform the action before the bean of this class is being used.
-     */
+
     @PostConstruct
     public void init(){
         collection = database.getCollection("Department_Collection");
-
     }
 
     /**
      * This method returns the list of all departments in the dept collection
      * @return list of departments
      */
-    public ArrayList<Department> viewDept() throws RepositoryException {
+    public ArrayList<Department> view() throws RepositoryException {
         log.info("Fetching all department records...");
-        log.info("hello");
         ArrayList<Department> deptList = new ArrayList<>();
         try(MongoCursor<Document> cursor = collection.find().iterator()) {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -71,10 +63,10 @@ public class DepartmentRepository{
     }
 
     /**
-     * This method is used to save the student details under department collection.
+     * This method is used to save the department details under department collection.
      * @return ture if successfully student is added false otherwise.
      */
-    public boolean DeptSave(Department dept) throws RepositoryRuntimeException, RepositoryException {
+    public boolean save(Department dept) throws RepositoryRuntimeException, RepositoryException {
         log.info("Adding new department");
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -84,8 +76,7 @@ public class DepartmentRepository{
             return true;
         } catch (JsonProcessingException e) {
             throw new RepositoryException(e.getMessage(),e);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
     }
@@ -99,8 +90,7 @@ public class DepartmentRepository{
             log.info("Checking dept id is present or not");
             Document query = new Document("id", id);
             return collection.find(query).first() == null;
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
     }
@@ -108,15 +98,14 @@ public class DepartmentRepository{
     /**
      * This method is used to delete the department from department collection
      */
-    public boolean DeptDelete(int id)  throws RepositoryRuntimeException
+    public boolean delete(int id)  throws RepositoryRuntimeException
     {
         try{
             log.info("Deleting the  department from collection");
             Document query = new Document("id",id);
             DeleteResult result = collection.deleteOne(query);
             return result.getDeletedCount() != 0;
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
     }
@@ -132,8 +121,7 @@ public class DepartmentRepository{
             var result = collection.updateOne(filter, update);
             Document query = new Document("id", dept_id);
             return collection.find(query).first();
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
 
@@ -146,7 +134,7 @@ public class DepartmentRepository{
     {
         try{
             Document filter = new Document("id", dept_id);
-            Document update = new Document("$set", new Document("HODName", newName));
+            Document update = new Document("$set", new Document("hodname", newName));
             var result = collection.updateOne(filter, update);
             Document query = new Document("id", dept_id);
             return collection.find(query).first();
@@ -154,5 +142,4 @@ public class DepartmentRepository{
             throw new RepositoryRuntimeException(e.getMessage(),e);
         }
     }
-
 }
