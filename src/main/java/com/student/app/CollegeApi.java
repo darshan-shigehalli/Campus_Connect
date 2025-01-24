@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * This class is used to take the choice of the user and the input from the user
+ * This class is used to take the choice of the user about the actions they wanted to perform and the input from the user.
 */
 @RestController
 @Slf4j
@@ -32,19 +32,17 @@ public class CollegeApi {
     /**
      * This method is to create the new department
      */
-    @PostMapping("/departments")
+    @PostMapping("/departments/create")
     public ResponseEntity<Object> createDept(@Valid  @RequestBody Department dept) {
         try {
-            if (service.deptAdd(dept)) {
+            if (service.addDept(dept)) {
+                log.info("new department added");
                 return ResponseEntity.status(HttpStatus.OK).body(dept);
-            } else {
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                        .body("Already there is the department with id:" + dept);
             }
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Already there is the department with id:" + dept.getId());
         } catch (Exception e) {
             log.error("Error in adding the department details: {}", e.getMessage(), e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An unexpected error occurred while processing the request.");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred while processing the request.");
         }
     }
 
@@ -54,13 +52,13 @@ public class CollegeApi {
     @DeleteMapping("/departments/{deptId}")
     public  ResponseEntity<Object> deleteDept(@PathVariable int deptId)
     {
-        // deleting the students belonging to particular department from student collection
+        // Initially deleting the students belonging to particular department from student collection
         try{
             service.deleteStdDept(deptId);
+            log.info("The students belong to the department id ={} is deleted successfully", deptId);
         }catch (RepositoryRuntimeException e)
         {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An unexpected error occurred while deleting the students belonging to department with id="+deptId);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred while deleting the students belonging to department with id="+deptId);
         }
         // deleting the department from dept collection
         try{
@@ -69,12 +67,11 @@ public class CollegeApi {
                 return ResponseEntity.status(HttpStatus.OK).body("Students belonging to department and department itself having DeptID="+deptId+"is successfully deleted");
             }
             else{
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to delete department.");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There is no department with the id="+deptId+" in the department collection.");
             }
         }catch(RepositoryRuntimeException e)
         {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An unexpected error occurred while deleting the department with id="+deptId);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred while deleting the department with id="+deptId);
         }
     }
 
@@ -86,9 +83,16 @@ public class CollegeApi {
         ArrayList<Department> departments;
         try {
             departments = service.viewDept();
-            return ResponseEntity.status(HttpStatus.OK).body(departments);
+            StringBuilder str= new StringBuilder();
+            for(int i=0;i<departments.getSize();i++)
+            {
+                str.append(departments.get(i));
+            }
+            log.info("Successfully fetched departments: {}", departments);
+            return ResponseEntity.status(HttpStatus.OK).body(str.toString());
+
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            log.error("An error occurred while reading departments: ", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred while reading the departments");
         }
     }
@@ -97,18 +101,22 @@ public class CollegeApi {
      * This method is used to print all the students belongs to particular department
      */
     @GetMapping("/departments/students/{dept_id}")
-    public  ResponseEntity<Object> readStudentOfParticularDept(@RequestBody int dept_id){
+    public  ResponseEntity<Object> readStudentOfParticularDept(@PathVariable int dept_id){
         ArrayList<Student> list=null;
-        if(service.IsDeptIdNotPresent(dept_id))
+        if(!service.IsDeptIdNotPresent(dept_id))
         {
             try{
-                list=service.StuOfDept(dept_id);
+                list=service.stuOfDept(dept_id);
                 if (list.getSize()==0) {
                     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There are no departments to display");
                 }
-                return ResponseEntity.status(HttpStatus.OK).body(list);
-            }catch(Exception e)
-            {
+                StringBuilder str= new StringBuilder();
+                for(int i=0;i<list.getSize();i++)
+                {
+                    str.append(list.get(i));
+                }
+                return ResponseEntity.status(HttpStatus.OK).body(str);
+            }catch(Exception e) {
                 log.info(e.getMessage(), e);
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred while processing the request.");
             }
@@ -121,46 +129,55 @@ public class CollegeApi {
     /**
      * This method is used to update the department name
      */
-    @PutMapping("/departments/update/{id}")
-    public  ResponseEntity<Object> updateDeptName(@PathVariable int id,@RequestBody Department dept) {
-        try {
-            Document doc=service.updateDeptName(dept.getId(), dept.getName());
-            return ResponseEntity.status(HttpStatus.OK).body(doc);
-        } catch (RepositoryException e) {
-            log.error(e.getMessage(), e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An unexpected error occurred while processing the request.");
+    @PutMapping("/departments/update")
+    public  ResponseEntity<Object> updateDeptName(@RequestBody Department dept) {
+        if (service.IsDeptIdNotPresent(dept.getId())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There  is no department with the id="+dept.getId());
+        } else {
+            try {
+                Document doc=service.updateDeptName(dept.getId(), dept.getName());
+                return ResponseEntity.status(HttpStatus.OK).body(doc);
+            } catch (RepositoryException e) {
+                log.error(e.getMessage(), e);
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred while processing the request.");
+            }
         }
     }
 
     /**
-     * This method is used to update the HOD name of the department
+     * This method is used to update the HOD name of the department.
      */
-    @PutMapping("/departments/update/hod/{id}")
-    public  ResponseEntity<Object> updateHODName(@PathVariable int id,@RequestBody Department dept)
+    @PutMapping("/departments/update/hod")
+    public  ResponseEntity<Object> updateHODName(@RequestBody Department dept)
     {
-        try{
-            Document doc=service.updateHODName(dept.getId(),dept.getHODName());
-            return ResponseEntity.status(HttpStatus.OK).body(doc);
-        }catch(RepositoryRuntimeException e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An unexpected error occurred while processing the request.");
+        if (service.IsDeptIdNotPresent(dept.getId())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There  is no department with the id="+dept.getId());
+        } else {
+            try{
+                Document doc=service.updateHODName(dept.getId(),dept.getHodname());
+                return ResponseEntity.status(HttpStatus.OK).body(doc);
+            }catch(RepositoryRuntimeException e) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                        .body("An unexpected error occurred while processing the request.");
+            }
         }
     }
 
-    //            STUDENT OPERATIONS BEGINS HERE
+
+    //                                      STUDENT OPERATIONS BEGINS HERE
+
 
     /**
      * This method is to take all the information from the student and then creating the student object of the same information.
      */
     @PostMapping("/students")
-    public  ResponseEntity<Object> create(@RequestBody Student student) {
+    public  ResponseEntity<Object> create(@Valid @RequestBody Student student) {
     log.info("Collecting the data of the student from the user");
         try {
-            if (service.add(student)) {
+            if (service.addStudent(student)) {
                 return ResponseEntity.status(HttpStatus.OK).body(student);
             }
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There is some issue in creating a student record");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("It seems you have entered wrong student Id or wrong department Id");
         }catch (Exception e) {
             log.error(e.getMessage(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -179,8 +196,7 @@ public class CollegeApi {
                 return ResponseEntity.status(HttpStatus.OK).body("The student with id "+ delid+" is deleted");
             }
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There is no student with id="+delid);
-        }catch(RepositoryRuntimeException e)
-        {
+        }catch(RepositoryRuntimeException e) {
             log.error(e.getMessage(),e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An unexpected error occurred while processing the request.");
@@ -194,13 +210,17 @@ public class CollegeApi {
     private  ResponseEntity<Object> read() {
         ArrayList<Student> students;
         try{
-            students = service.view();
+            students = service.viewStudents();
             if (students.getSize()==0) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There are no students to display");
             }
-            return ResponseEntity.status(HttpStatus.OK).body(students);
-        }catch (Exception e)
-        {
+            StringBuilder str= new StringBuilder();
+            for(int i=0;i<students.getSize();i++)
+            {
+                str.append(students.get(i));
+            }
+            return ResponseEntity.status(HttpStatus.OK).body(str);
+        }catch (Exception e) {
             log.error(e.getMessage(),e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An unexpected error occurred while processing the request.");
@@ -212,7 +232,7 @@ public class CollegeApi {
      */
     @PutMapping("/students/name/{std_id}")
     public  ResponseEntity<Object> updateStdName(@PathVariable int std_id,@RequestBody Student student) {
-        if (service.IsStdIdNotPresent(std_id)) {
+        if (service.isStdIdNotPresent(std_id)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There  is no student with the id="+std_id);
         } else {
             try{
@@ -232,7 +252,7 @@ public class CollegeApi {
      */
     @PutMapping("/students/age/{std_id}")
     public  ResponseEntity<Object> updateStdAge(@PathVariable int std_id,@RequestBody Student student) {
-        if (service.IsStdIdNotPresent(std_id)) {
+        if (service.isStdIdNotPresent(std_id)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There  is no student with the id="+std_id);
         } else {
             try{
@@ -252,7 +272,7 @@ public class CollegeApi {
      */
     @PutMapping("/students/deptId/{std_id}")
     public  ResponseEntity<Object> updateStdDeptId(@PathVariable int std_id,@RequestBody Student student) {
-        if (service.IsStdIdNotPresent(std_id)) {
+        if (service.isStdIdNotPresent(std_id)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("There  is no student with the id="+std_id);
         } else {
             try{
